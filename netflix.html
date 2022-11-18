@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <!-- CSS only -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image:url(./img/netflixbanner.png);
+            background-repeat: no-repeat;
+            background-size: 100% 740px;
+            font-family: arial;
+            color: white;
+            background-color: black;
+        }
+        .shade{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            opacity: 0.6;
+            height: 740px;
+            z-index: -1;
+        }
+        header {
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+        }
+        .head-left{
+            width: 220px;
+            height: 100%;
+            margin-left: 60px;
+        }
+         
+        .head-left span{
+            font-family: 'Bebas Neue', cursive;
+            font-weight: bold;
+            font-size: 60px;
+            color: red;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            text-shadow: -4px 4px 8px rgba(253, 249, 249, 0.7);
+        }
+        .head-right {
+            display: flex;
+            align-items: center;
+            width: 500px;
+            /* border: 1px solid black; */
+        }
+        .head-right a{
+            text-decoration: none;
+            color: white;
+        }
+        
+      
+        main {
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+        }
+        .title {
+            font-size: 60px;
+            width: 700px;
+            font-weight: bold;
+        }
+        .sub-title {
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+        .register-text  {
+        font-size: 20px;
+        margin-bottom: 15px;
+         }  
+            
+            .btn {
+                color: white;
+                cursor: pointer;
+            } 
+            .btn-red{
+                background-color: red;
+                color: white;
+                cursor: pointer;
+            }
+            #btn1 {
+                background-color: red;
+                font-size: 18px;
+                color: white;
+            }
+           
+            #btn2 {
+                font-size:28px;
+                height: 70px;
+            }
+            hr {
+                background-color: rgb(133, 128, 128);
+                height: 8px;
+                border: none;
+                offset: none;
+            }
+            .banner {
+                height: 400px;
+                /* padding: 80px 50px; */
+                /* text-align: center; */
+            }
+            
+            #banner1-img,#banner3-img {
+                float:right;
+                height: 300px;
+                margin: 50px 140px;
+            }
+            #banner2-img,#banner4-img {
+                float:left;
+                height: 300px;
+                margin: 50px 140px;
+            }
+            .banner-title{
+                padding-top: 100px;
+                margin: 0px 200px;
+            }
+            .banner h1{
+                font-size: 50px;
+                margin: 20px;
+            }
+            .banner p {
+                font-size: 25px;
+            }
+
+            /* Section2 start */
+
+            .sec2 h1{
+                text-align: center;
+                font-size: 50px;
+                font-weight: bold;
+                margin-bottom: 60px;
+                margin-top: 80px;
+            }
+            .detail{
+                /* border: 2px solid white; */
+                margin: 0 23%;
+            }
+            .detail details{
+                background-color: rgb(52, 51, 51);
+                margin-bottom: 8px;
+            }
+            .detail details > summary {
+                font-size: 28px;
+                padding: 10px 20px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .detail details > p {
+                font-size: 25px;
+                padding: 10px;
+            }
+            .detail details > hr {
+                background-color: black;
+                height: 2px;
+                border: none;
+                offset: none;
+            }
+            .sec2-bottom {
+                /* border: 1px solid white; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: 60px;
+            }
+            .sec2-bottom > div{
+                margin: 10px;
+            }
+       /* footer start */
+       footer{
+        /* border: 2px solid white; */
+        margin-top: 60px;
+        margin-bottom: 30px;
+       }
+       footer table{
+        margin: 0 auto;
+        width: 60%;
+        font-family: arial;
+       }
+       
+       table thead td {
+        font-size: 16px;
+        padding-bottom: 20px;
+        color: gray;
+       }
+
+       table tbody td {
+        font-size: 12px;
+        padding: 10px 0;
+        letter-spacing: 1px;
+       }
+
+       table tfoot td {
+        padding: 10px 0;
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: gray;
+       }
+
+       table tfoot td div {
+        background-color: transparent;
+        margin-top: 10px;
+       }
+
+       table a {
+        text-decoration: none;
+        color: gray;
+       }
+
+       table a:hover {
+        text-decoration: underline;
+        color: gray;
+       }
+
+    </style>
+</head>
+<body>
+
+    <div class="shade"></div>
+    <header>
+        <div class="head-left">
+            <span>NETFLIX</span>
+        </div>
+        <div class="head-right">
+            <div class="dropdown m-3">
+                <button data-bs-target="#items" data-bs-toggle="dropdown" class="dropdown-toggle btn btn-outline-secondary">
+                    <span class="bi bi-globe"></span> Language
+                </button>
+                <div class="dropdown-menu dropdown-menu-info" id="items">
+                    <div class="dropdown-item"><span class="dropdown-text">English</span></div>
+                    <div class="dropdown-item"><span class="dropdown-text">हिन्दी</span></div>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-item"><span class="dropdown-text">Help <span class="bi bi-question-circle"></span></span></div>
+                </div>
+            </div>
+            
+          <button id="btn1" class="btn btn-red"><a href="netflixLogin.html">Sign In</a></button>
+
+        </div>
+    </header>
+
+        <main>
+            <div class="title">Unlimited movies, TV shows and more.</div>
+            <div class="sub-title">Watch anywhere. Cancel anytime.</div>
+            <div class="register-text">Ready to watch? Enter your email to create or restart your membership.</div>
+            
+            <div class="input-group input-group-lg w-50">
+                <input type="email" class="form-control w-50" placeholder="Email address">
+                <button id="btn2" class="btn btn-red">Get Started <span class="bi bi-chevron-right"></span></button>
+            </div>
+        </main>
+        <section>
+            <hr>
+            <div  class="banner">
+                <img id="banner1-img" src="./img/banner1.png" alt="banner1">
+                <div class="banner-title">
+                    <h1>Enjoy on your TV.</h1>
+                    <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="banner">
+                <img id="banner2-img" src="./img/banner2.png" alt="banner2">
+                <div class="banner-title">
+                    <h1>Download your shows to watch offline.</h1>
+                    <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                </div>
+            </div>            
+
+            <hr>
+
+            <div class="banner">
+                <img id="banner3-img" src="./img/banner3.png" alt="banner3">
+                <div class="banner-title">
+                    <h1>Watch everywhere.</h1>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                </div>
+            </div>     
+
+            <hr>
+
+            <div class="banner">
+                <img id="banner4-img" src="./img/banner4.png" alt="banner4">
+                <div class="banner-title">
+                    <h1>Create profiles for children.</h1>
+                    <p>Send children on adventures with their favourite characters in a space made just for them—free with your membership.</p>
+                </div>
+            </div> 
+
+            <hr>
+        </section>
+        <section class="sec2">
+            <h1>Frequently Asked Questions</h1>
+            <div class="detail">
+                <details>
+                    <summary>What is Netflix? <span onclick="myFun(this)" id="tog" class="bi bi-plus-lg"></span> </summary>
+                    <hr>
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more - on thousands of internet-connected devices.</p>
+
+                       <p>You can watch as much as you want, whenever you want, without a single ad - all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                </details>
+
+                <details>
+                    <summary>
+                        How much does Netflix cost?<span class="bi bi-plus-lg"></span></summary>
+                        <hr>
+                        <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹ 149 to ₹ 649 a month. No extra costs, no contracts.</p>
+                </details>
+
+                <details>
+                    <summary>
+                        Where can I watch?<span class="bi bi-plus-lg"></span></summary>
+                        <hr>
+                        <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+                        <p>
+                            You can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+                </details>
+
+                <details>
+                    <summary>How do I cancel?<span class="bi bi-plus-lg"></span></summary>
+                    <hr>
+                    <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees - start or stop your account anytime.</p>
+                </details>
+
+                <details>
+                    <summary> What can I watch on Netflix?<span class="bi bi-plus-lg"></span></summary>
+                    <hr>
+                    <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                </details>
+
+                <details>
+                    <summary>Is Netflix good for kids?<span class="bi bi-plus-lg"></span></summary>
+                    <hr>
+                    <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.</p>
+                    <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+                </details>
+
+            </div>
+
+            <div class="sec2-bottom">
+                <div class="register-text">Ready to watch? Enter your email to create or restart your membership.</div>
+
+                <div class="input-group input-group-lg w-50">
+                    <input type="email" class="form-control w-50" placeholder="Email address">
+                    <button id="btn2" class="btn btn-red">Get Started <span class="bi bi-chevron-right"></span></button>
+                </div>
+          </div>
+
+            <hr>
+
+        </section>
+
+        <footer>
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">Questions? Call <a href="#">000-800-040-1843</a></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://help.netflix.com/en/node/412">FAQ</a></td>
+                        <td><a href="https://help.netflix.com/en/">Help Centre</a></td>
+                        <td><a href="netflixLogin.html">Account</a></td>
+                        <td><a href="https://media.netflix.com/en/">Media Centre</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://ir.netflix.net/ir-overview/profile/default.aspx">Investor Relations</a></td>
+                        <td><a href="https://jobs.netflix.com/">Jobs</a></td>
+                        <td><a href="https://devices.netflix.com/en/">Ways to Watch</a></td>
+                        <td><a href="https://help.netflix.com/legal/termsofuse">Terms of Use</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://help.netflix.com/legal/privacy">Privacy</a></td>
+                        <td><a href="https://www.netflix.com/in/">Cookie Preferences</a></td>
+                        <td><a href="https://help.netflix.com/legal/corpinfo">Corporate Information</a></td>
+                        <td><a href="https://help.netflix.com/en/contactus">Contact Us</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://fast.com/">Speed Test</a></td>
+                        <td><a href="https://help.netflix.com/legal/notices">Legal Notices</a></td>
+                        <td><a href="https://www.netflix.com/in/browse/genre/839338">Only on Netflix</a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td>
+                            <div class="dropdown  m-3">
+                                <button data-bs-target="#items" data-bs-toggle="dropdown" class="dropdown-toggle btn btn-outline-secondary">
+                                    <span class="bi bi-globe"></span> Language
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-info" id="items">
+                                    <div class="dropdown-item"><span class="dropdown-text">English</span></div>
+                                    <div class="dropdown-item"><span class="dropdown-text">हिन्दी</span></div>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="dropdown-item"><span class="dropdown-text">Help <span class="bi bi-question-circle"></span></span></div>
+                                </div>
+                            </div>
+                       </td>
+                    </tr>
+                    <tr>
+                        <td>Netflix India</td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+        </footer>
+        
+       
+
+
+       
+        
+        
+
+   <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

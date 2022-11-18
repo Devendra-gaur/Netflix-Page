@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-image:url(./img/netflixbanner.png);
+            background-size: cover;
+            height: 140vh;
+        }
+        .shade{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            opacity: 0.6;
+            height: 104vh;
+            z-index: -1;
+        }
+        header {
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid white; */
+        }
+        .head-left{
+            width: 220px;
+            height: 100%;
+            margin-left: 60px;
+        }
+        .head-left span{
+            font-family: 'Bebas Neue', cursive;
+            font-weight: bold;
+            font-size: 60px;
+            color: red;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            text-shadow: -4px 4px 8px rgba(253, 249, 249, 0.7);
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        main{
+            /* border: 1px solid white; */
+            color: white;
+            margin: 0 auto;
+            margin-bottom: 155px;
+            height: 70vh;
+        }
+        .container{
+            /* border: 1px solid blue; */
+            background-color: rgba(0,0,0,0.7);
+            width: 30%;
+            padding-top: 15px;
+            height: 80vh;
+            
+        }
+        .container form label{
+            font-size: 35px;
+            margin-bottom: 20px;
+            /* margin-left: 15px; */
+        }
+        .container form {
+            /* border: 1px solid red; */
+            margin: 30px auto;
+            width: 60%;
+        }
+        .container form ul li{
+            list-style-type: none;
+            margin-bottom: 10px;
+            margin-left: -60px;
+        }
+        input {
+            margin: 10px 30px;
+            padding: 10px;
+            width: 92%;
+            border-radius: 5px;
+            border: none;
+            background-color: lightgray
+        }
+        form ul li:nth-child(3) button{
+            background-color: red;
+            border-radius: 5px;
+            font-size: 20px;
+            color: white;
+            margin-left: 30px;
+            width: 92%;
+            padding: 10px;
+            border: none;
+            margin-top: 25px;
+        }
+        form ul li:nth-child(4){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border: 1px solid olive; */
+            height: 50px;
+        }
+        form ul li:nth-child(4) div input {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+        form ul li:nth-child(4) div span{
+            margin-left: -25px;
+            color: rgb(190, 185, 185);
+            font-size: 14px;
+            /* border: 1px solid blue; */
+        }
+        form ul li:nth-child(4) div a{
+            color: rgb(190, 185, 185);
+            font-size: 14px;
+        }
+        #signBottom {
+            /* text-align: center; */
+            width: 60%;
+            margin-left:120px;
+            /* border: 1px solid yellow; */
+            height: 160px;
+        }
+        #signBottom div{
+            display: flex;
+        }
+
+        #signBottom #p1 {
+            font-size: 18px;
+            color: grey;
+        }
+        #signBottom #p2 {
+            font-size: 14px;
+            color: grey;
+            line-height: 16px;
+        }
+        #signBottom #p2 a{
+            color: blue;
+        }
+        /* footer */
+        footer{
+        /* border: 2px solid white; */
+        height: 300px;
+        margin-bottom: 40px;
+        background-color: rgba(0,0,0,0.9);
+       }
+       footer table{
+        margin: 0 auto;
+        width: 60%;
+        font-family: arial;
+       }
+       
+       table thead td {
+        font-size: 16px;
+        padding-top: 42px;
+        padding-bottom: 20px;
+        color: gray;
+       }
+
+       table tbody td {
+        font-size: 13px;
+        padding: 14px 0;
+        letter-spacing: 1px;
+       }
+
+       table tfoot td div {
+        background-color: transparent;
+        padding-top: 20px;
+        /* margin-bottom: 40px; */
+       }
+
+       table a {
+        text-decoration: none;
+        color: gray;
+       }
+
+       table a:hover {
+        text-decoration: underline;
+        color: gray;
+       }
+
+        
+    </style>
+</head>
+<body>
+    <div class="shade"></div>
+    <header>
+        <div class="head-left">
+            <span>NETFLIX</span>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form action="#">
+                <label for="#">Sign In</label>
+                <ul>
+                    <li><input type="text" placeholder="Email or phone number"></li>
+                    <li><input type="number" placeholder="Password"></li>
+                    <li><button>Sign In</button></li>
+                    <li><div><input type="checkbox" checked> <span>Rememberme</span></div><div><a href="#">Need help?</a></div></li>
+                </ul>
+           </form>
+
+           <div id="signBottom">
+            <p id="p1">New to Netflix? <a href=""> Sign up now.</a></p>
+            <div>
+                <p id="p2">This page is protected by Google reCAPTCHA to ensure you're not a bot.<a href="#"> Learn more.</a></p>
+           </div>
+        </div>
+    </main>
+    <footer>
+        <table>
+            <thead>
+                <tr>
+                    <td colspan="4">Questions? Call <a href="#">000-800-040-1843</a></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://help.netflix.com/en/node/412">FAQ</a></td>
+                    <td><a href="https://help.netflix.com/en/">Help Centre</a></td>
+                    <td><a href="https://help.netflix.com/legal/termsofuse">Terms of Use</a></td>
+                    <td><a href="https://help.netflix.com/legal/privacy">Privacy</a></td>
+                </tr>
+
+                <tr>
+                    <td><a href="https://www.netflix.com/in/">Cookie Preferences</a></td>
+                    <td><a href="https://help.netflix.com/legal/corpinfo">Corporate Information</a></td>
+                </tr>
+
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>
+                        <div class="dropdown  m-3">
+                            <button data-bs-target="#items" data-bs-toggle="dropdown" class="dropdown-toggle btn btn-outline-secondary">
+                                <span class="bi bi-globe"></span> Language
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-info" id="items">
+                                <div class="dropdown-item"><span class="dropdown-text">English</span></div>
+                                <div class="dropdown-item"><span class="dropdown-text">हिन्दी</span></div>
+                                <div class="dropdown-divider"></div>
+                                <div class="dropdown-item"><span class="dropdown-text">Help <span class="bi bi-question-circle"></span></span></div>
+                            </div>
+                        </div>
+                   </td>
+                </tr>
+            </tfoot>
+        </table>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
